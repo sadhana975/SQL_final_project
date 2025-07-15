@@ -111,15 +111,6 @@ FROM Grades g
 JOIN Courses c ON g.course_id = c.course_id
 GROUP BY g.student_id;
 
--- 6. Rank list using Window Function
--- WITH GPA_Calc AS (
---     SELECT g.student_id, g.semester_id,
---            ROUND(SUM(g.grade_point * c.credits) / SUM(c.credits), 2) AS GPA
---     FROM Grades g
---     JOIN Courses c ON g.course_id = c.course_id
---     GROUP BY g.student_id, g.semester_id
--- )
--- SELECT *, RANK() OVER (PARTITION BY semester_id ORDER BY GPA DESC) AS rank
--- FROM GPA_Calc;
+
 
 
