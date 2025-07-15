@@ -1,4 +1,4 @@
-
+-- CREATING DATABASE 
 DROP DATABASE IF EXISTS result_processing_system ;
 
 CREATE DATABASE result_processing_system;
@@ -46,7 +46,7 @@ CREATE TABLE Grades (
         REFERENCES Semesters (semester_id)
 );
 
--- 3. Sample Data Insertion
+-- 3. INSERTING VALUES INTO TABLE
 INSERT INTO Students VALUES
 (1, 'Sadhana', 'MSDs', 2022, 'sadhana2gmail.com'),
 (2, 'Suresh', 'MSCs', 2022, 'suresh@gmail.com'),
